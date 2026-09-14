@@ -1,0 +1,97 @@
+name: Epic
+description: Define a large product capability or outcome spanning multiple features.
+type: Epic
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use an Epic for a large product outcome that will be delivered through multiple features. Break the work down into Feature sub-issues.
+
+  - type: checkboxes
+    id: existing
+    attributes:
+      label: Existing Issues
+      options:
+        - label: I searched existing issues and did not find a duplicate.
+          required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / Opportunity
+      description: What customer or business problem does this Epic address?
+      placeholder: Describe the problem, its context, and why it matters.
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired Outcome
+      description: What should be true when this Epic is complete?
+      placeholder: Describe the measurable product outcome rather than implementation details.
+    validations:
+      required: true
+
+  - type: textarea
+    id: users
+    attributes:
+      label: Target Users
+      description: Which personas or user groups are affected?
+      placeholder: Business Owner, Inventory Manager, Warehouse Manager, Staff...
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: In Scope
+      description: What capabilities belong to this Epic?
+      placeholder: |
+        - Capability 1
+        - Capability 2
+        - Capability 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of Scope
+      description: Explicitly state what this Epic does not include.
+      placeholder: |
+        - Not included in this Epic...
+    validations:
+      required: false
+
+  - type: textarea
+    id: success
+    attributes:
+      label: Success Criteria
+      description: How will we know this Epic delivered the intended outcome?
+      placeholder: |
+        - Metric / observable outcome
+        - Acceptance condition
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies / Risks
+      description: List dependencies, constraints, assumptions, or major risks.
+    validations:
+      required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Link the PRD, product documentation, ADRs, designs, or related issues.
+      placeholder: |
+        - PRD:
+        - Product docs:
+        - ADR:
+        - Related issues:
+    validations:
+      required: false

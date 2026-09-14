@@ -1,0 +1,119 @@
+name: Bug
+description: Report reproducible incorrect or unexpected behavior.
+type: Bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please provide enough information to reproduce and verify the problem. Do not include secrets, credentials, or sensitive customer data.
+
+        **Security vulnerabilities must not be reported here.** Follow the private process in [SECURITY.md](https://github.com/tadbirpro/.github/blob/main/SECURITY.md).
+
+  - type: checkboxes
+    id: existing
+    attributes:
+      label: Existing Issues
+      options:
+        - label: I searched existing issues and did not find a duplicate.
+          required: true
+
+  - type: input
+    id: area
+    attributes:
+      label: Product Area
+      description: Which part of the product is affected?
+      placeholder: e.g. Inventory, Warehouse
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem
+      description: What is happening?
+      placeholder: Describe the incorrect behavior clearly.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should happen instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Provide the smallest reliable reproduction.
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: Choose the highest level that applies.
+      options:
+        - "Critical — outage, data loss or corruption, or tenant-isolation failure"
+        - "High — core workflow broken with no workaround"
+        - "Medium — workflow impaired but a workaround exists"
+        - "Low — minor or cosmetic issue"
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Who or what is affected? Is there data integrity, security, or operational impact?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Frequency
+      options:
+        - Always
+        - Often
+        - Sometimes
+        - Rarely
+        - Unknown
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Include relevant environment, version, browser, API version, or deployment information.
+      placeholder: |
+        Environment:
+        Application version / commit:
+        Browser / client:
+        Other relevant versions:
+    validations:
+      required: false
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs / Screenshots / Additional Evidence
+      description: Add sanitized logs, screenshots, traces, or other evidence. Remove secrets and sensitive data.
+    validations:
+      required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: Related Issues / PRs
+      description: Link related issues, pull requests, or incidents.
+    validations:
+      required: false

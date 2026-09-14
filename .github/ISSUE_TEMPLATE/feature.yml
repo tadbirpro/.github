@@ -1,0 +1,111 @@
+name: Feature
+description: Propose a user-visible product capability within an Epic or product area.
+type: Feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the customer capability and expected behavior. Keep implementation work in Story or Task sub-issues.
+
+  - type: checkboxes
+    id: existing
+    attributes:
+      label: Existing Issues
+      options:
+        - label: I searched existing issues and did not find a duplicate.
+          required: true
+
+  - type: input
+    id: area
+    attributes:
+      label: Product Area
+      description: Which part of the product does this feature belong to?
+      placeholder: e.g. Inventory, Warehouse
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What problem does this feature solve?
+      placeholder: Explain the current pain point or unmet need.
+    validations:
+      required: true
+
+  - type: textarea
+    id: value
+    attributes:
+      label: Business / User Value
+      description: Why is solving this problem valuable?
+      placeholder: Describe the impact for customers or the business.
+    validations:
+      required: true
+
+  - type: textarea
+    id: users
+    attributes:
+      label: Target Users
+      description: Which personas use or benefit from this feature?
+    validations:
+      required: true
+
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected Behavior
+      description: Describe the feature from the user's perspective.
+      placeholder: Describe the main workflow and expected result.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Define observable and testable acceptance criteria for the feature as a whole. Detailed criteria belong in child Stories.
+      placeholder: |
+        - [ ] Given ..., when ..., then ...
+        - [ ] ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: rules
+    attributes:
+      label: Business Rules
+      description: List relevant domain rules and invariants.
+      placeholder: |
+        - BR-...
+        - ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of Scope
+      description: What is explicitly excluded?
+    validations:
+      required: false
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Link blocking issues, upstream capabilities, or external dependencies.
+    validations:
+      required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Link the Epic, PRD, design, ADRs, API contract, or related issues.
+      placeholder: |
+        - Parent Epic:
+        - PRD:
+        - Design:
+        - ADR:
+    validations:
+      required: false

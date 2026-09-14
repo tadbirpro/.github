@@ -1,0 +1,74 @@
+name: Task
+description: Track a concrete implementation, maintenance, or delivery task.
+type: Task
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use a Task for concrete engineering work. Link it as a sub-issue of its parent Story or Feature when one exists.
+
+  - type: checkboxes
+    id: existing
+    attributes:
+      label: Existing Issues
+      options:
+        - label: I searched existing issues and did not find a duplicate.
+          required: true
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: What concrete work needs to be completed?
+      placeholder: Describe the task and expected result.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Why is this task needed? Link the parent Story or Feature when applicable.
+    validations:
+      required: false
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Describe the implementation scope.
+      placeholder: |
+        - Change ...
+        - Add ...
+        - Update ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: done
+    attributes:
+      label: Definition of Done
+      description: What must be true before this task can be closed?
+      placeholder: |
+        - [ ] Implementation complete
+        - [ ] Tests added/updated
+        - [ ] Documentation updated where required
+        - [ ] CI passes
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical_notes
+    attributes:
+      label: Technical Notes
+      description: Add constraints, API/database considerations, migration notes, or implementation guidance.
+    validations:
+      required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Link the parent issue, ADR, documentation, design, or related PR.
+    validations:
+      required: false

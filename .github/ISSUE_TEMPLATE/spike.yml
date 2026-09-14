@@ -1,0 +1,95 @@
+name: Spike
+description: Time-box an investigation to reduce technical or product uncertainty.
+type: Spike
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A Spike answers one question within a fixed time-box. Its findings should feed a decision, an ADR, or follow-up issues.
+
+  - type: checkboxes
+    id: existing
+    attributes:
+      label: Existing Issues
+      options:
+        - label: I searched existing issues and did not find a duplicate.
+          required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Question to Answer
+      description: What uncertainty must this investigation resolve?
+      placeholder: State one clear decision or question.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Why do we need this investigation now?
+    validations:
+      required: true
+
+  - type: input
+    id: decision_owner
+    attributes:
+      label: Decision Owner
+      description: Who will make the decision based on the findings?
+      placeholder: "@username"
+    validations:
+      required: true
+
+  - type: textarea
+    id: options
+    attributes:
+      label: Options / Areas to Investigate
+      description: List known approaches, technologies, risks, or experiments to evaluate.
+      placeholder: |
+        - Option A
+        - Option B
+        - Benchmark / prototype ...
+    validations:
+      required: false
+
+  - type: input
+    id: timebox
+    attributes:
+      label: Time-box
+      description: Maximum effort allocated before reporting findings.
+      placeholder: e.g. 1 day, 4 hours
+    validations:
+      required: true
+
+  - type: textarea
+    id: deliverable
+    attributes:
+      label: Expected Deliverable
+      description: What output should this Spike produce?
+      placeholder: |
+        - Recommendation
+        - Trade-off analysis
+        - Prototype / benchmark results
+        - ADR proposal if a decision is made
+    validations:
+      required: true
+
+  - type: textarea
+    id: decision
+    attributes:
+      label: Decision Criteria
+      description: What criteria will be used to compare options or reach a conclusion?
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Link the parent issue this Spike unblocks, docs, ADRs, external specifications, or prior research.
+      placeholder: |
+        - Parent issue:
+        - Related docs / ADRs:
+    validations:
+      required: false

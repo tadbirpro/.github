@@ -1,0 +1,95 @@
+name: User Story
+description: Define a small, testable user requirement delivering product value.
+type: Story
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A Story should be independently understandable, testable, and small enough to implement within a normal iteration.
+
+  - type: checkboxes
+    id: existing
+    attributes:
+      label: Existing Issues
+      options:
+        - label: I searched existing issues and did not find a duplicate.
+          required: true
+
+  - type: input
+    id: persona
+    attributes:
+      label: Persona
+      description: Who needs this capability?
+      placeholder: Warehouse Manager
+    validations:
+      required: true
+
+  - type: input
+    id: area
+    attributes:
+      label: Product Area
+      description: Which part of the product does this story belong to?
+      placeholder: e.g. Inventory, Warehouse
+    validations:
+      required: true
+
+  - type: textarea
+    id: story
+    attributes:
+      label: User Story
+      description: Express the requirement from the persona's perspective.
+      placeholder: |
+        I want to ...
+        so that ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Add any context necessary to understand why the story exists.
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Define observable and testable behavior.
+      placeholder: |
+        - [ ] Given ..., when ..., then ...
+        - [ ] Given ..., when ..., then ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: rules
+    attributes:
+      label: Business Rules
+      description: Reference or summarize applicable business rules.
+      placeholder: |
+        - BR-INV-001
+        - BR-INV-006
+    validations:
+      required: false
+
+  - type: textarea
+    id: edge_cases
+    attributes:
+      label: Edge Cases
+      description: Identify important failure scenarios, boundaries, or exceptional behavior.
+    validations:
+      required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Link the parent Feature, documentation, designs, or API contract.
+      placeholder: |
+        - Parent Feature:
+        - Product docs:
+        - Design:
+    validations:
+      required: false
